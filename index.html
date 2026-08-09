@@ -264,6 +264,73 @@
     .main{margin-left:236px;}
   }
 
+  /* ---------- bottom tab bar (native app style) ---------- */
+  .tabbar{
+    display:none;
+    position:fixed;
+    left:0; right:0; bottom:0;
+    z-index:85;
+    background:rgba(22,20,32,.93);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border-top:1px solid var(--border);
+    padding:6px 10px calc(8px + env(safe-area-inset-bottom));
+  }
+  .tab{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:3px;
+    padding:8px 0 7px;
+    border:none;
+    background:none;
+    color:var(--ink-soft);
+    font-family:'IBM Plex Sans Thai';
+    font-size:11px;
+    font-weight:600;
+    cursor:pointer;
+    border-radius:14px;
+    transition:color .13s ease, background .13s ease;
+    touch-action:manipulation;
+  }
+  .tab .t-ico{font-size:20px; line-height:1;}
+  .tab:active{transform:scale(.93);}
+  .tab.active{
+    color:var(--primary);
+    background:rgba(167,139,250,.13);
+  }
+  @keyframes sheetUp{
+    from{ transform:translateY(70px); opacity:.5; }
+    to{ transform:none; opacity:1; }
+  }
+  @media (max-width:767px){
+    body{-webkit-tap-highlight-color:transparent;}
+    .btn,.chip,.step,.tab,.menu-btn,.back-btn,.nav-item{touch-action:manipulation;}
+    .menu-btn{display:none;}
+    .sidebar{display:none;}
+    .tabbar{display:flex;}
+    .topbar{
+      position:sticky;
+      top:0; z-index:60;
+      margin:0 -18px 16px;
+      padding:calc(14px + env(safe-area-inset-top)) 18px 14px;
+      background:rgba(18,16,26,.85);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--border);
+    }
+    .pg{padding-bottom:calc(104px + env(safe-area-inset-bottom));}
+    .toast{bottom:calc(92px + env(safe-area-inset-bottom));}
+    .modal-overlay{align-items:flex-end; padding:0;}
+    .modal-box{
+      border-radius:24px 24px 0 0;
+      padding:24px 22px calc(26px + env(safe-area-inset-bottom));
+      max-width:none;
+      animation:sheetUp .3s cubic-bezier(.32,.72,0,1) both;
+    }
+  }
+
   /* ---------- layout ---------- */
   .main{}
   .pg{
@@ -896,11 +963,11 @@
 
   <!-- ================= แท็บ 2 : ประวัติการเพิ่มยอด ================= -->
   <section class="page hidden" id="page-history">
-    <button class="back-btn" data-back="summary">← ย้อนกลับ</button>
-    <header class="page-title">
+    <div class="topbar">
+      <button class="menu-btn" aria-label="เมนู">☰</button>
       <h1>ประวัติการเพิ่มยอด</h1>
-      <p class="sub">บันทึกทุกครั้งที่เพิ่ม/ลบ/แก้ไขรายการ</p>
-    </header>
+    </div>
+    <button class="back-btn" data-back="summary">← ย้อนกลับ</button>
 
     <div class="card">
       <p class="label" id="histCountLabel">ประวัติการเพิ่ม-ลบ</p>
@@ -910,11 +977,11 @@
 
   <!-- ================= แท็บ 3 : ข้อมูลทั้งหมด ================= -->
   <section class="page hidden" id="page-data">
-    <button class="back-btn" data-back="summary">← ย้อนกลับ</button>
-    <header class="page-title">
+    <div class="topbar">
+      <button class="menu-btn" aria-label="เมนู">☰</button>
       <h1>ข้อมูลทั้งหมด</h1>
-      <p class="sub">แก้ไขข้อมูลผ่านเว็บได้ที่นี่ — เผื่อมีข้อมูลเพิ่มเติมอยากใส่</p>
-    </header>
+    </div>
+    <button class="back-btn" data-back="summary">← ย้อนกลับ</button>
 
     <div class="card data-card">
       <p class="label">เป้าหมาย</p>
@@ -963,6 +1030,11 @@
   <button class="nav-item active" data-page="summary"><span class="ico">▤</span> สรุปยอด</button>
   <button class="nav-item" data-page="history"><span class="ico">≡</span> ประวัติการเพิ่ม</button>
   <button class="nav-item" data-page="data"><span class="ico">⚙</span> ข้อมูลทั้งหมด</button>
+</nav>
+<nav class="tabbar" id="tabbar">
+  <button class="tab active" data-page="summary"><span class="t-ico">▤</span>สรุปยอด</button>
+  <button class="tab" data-page="history"><span class="t-ico">≡</span>ประวัติ</button>
+  <button class="tab" data-page="data"><span class="t-ico">⚙</span>ข้อมูล</button>
 </nav>
 <div class="overlay" id="overlay"></div>
 
@@ -1077,6 +1149,7 @@ async function reloadDb(j){
 function setPage(name){
   document.querySelectorAll('.page').forEach(p=> p.classList.toggle('hidden', p.id !== 'page-' + name));
   document.querySelectorAll('.nav-item').forEach(n=> n.classList.toggle('active', n.dataset.page === name));
+  document.querySelectorAll('.tab').forEach(t=> t.classList.toggle('active', t.dataset.page === name));
   closeMenu();
   if(name === 'history') renderHistory();
   if(name === 'data') fillDataPage();
@@ -1500,13 +1573,18 @@ async function tryAutoCopy(silent){
 // ================= init =================
 window.addEventListener('DOMContentLoaded', async ()=>{
   // menus
-  document.getElementById('menuBtn').addEventListener('click', ()=>{
-    const sb = document.getElementById('sidebar');
-    sb.classList.toggle('open');
-    document.getElementById('overlay').classList.toggle('show', sb.classList.contains('open'));
+  document.querySelectorAll('.menu-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const sb = document.getElementById('sidebar');
+      sb.classList.toggle('open');
+      document.getElementById('overlay').classList.toggle('show', sb.classList.contains('open'));
+    });
   });
   document.querySelectorAll('.nav-item').forEach(n=>{
     n.addEventListener('click', ()=> setPage(n.dataset.page));
+  });
+  document.querySelectorAll('.tab').forEach(t=>{
+    t.addEventListener('click', ()=> setPage(t.dataset.page));
   });
   document.querySelectorAll('.back-btn').forEach(b=>{
     b.addEventListener('click', ()=> setPage(b.dataset.back));
