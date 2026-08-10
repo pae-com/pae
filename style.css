@@ -1267,35 +1267,6 @@ textarea.big:focus{ border-color: var(--primary); background: var(--surface); bo
 .cal-actions .btn{ flex: 1; }
 
 /* ============================================================
-   CHARTS
-   ============================================================ */
-.chart-wrap{
-  background: #0D071B;
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius-sm);
-  padding: 10px;
-  margin-bottom: 10px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-}
-.chart-wrap canvas{ display: block; width: 100%; }
-#dailyChart{ height: 175px; }
-#channelChart{ height: 200px; }
-.chart-sub{ font-size: 12px; color: var(--ink-soft); margin: 0 0 14px; font-weight: 500; }
-.chart-legend{ display: grid; grid-template-columns: 1fr 1fr; gap: 7px 12px; }
-.legend-item{
-  display: flex; align-items: center; gap: 8px;
-  font-size: 12.5px; color: var(--ink); font-weight: 600;
-}
-.legend-item i{ width: 10px; height: 10px; border-radius: 3px; flex: none; box-shadow: 0 0 8px rgba(255,255,255,0.15); }
-.legend-item span{ flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.legend-item b{ font-family: var(--font-mono); color: var(--primary-light); }
-@media (max-width: 380px){
-  .chart-legend{ grid-template-columns: 1fr; }
-}
-
-/* ============================================================
    MISC
    ============================================================ */
 .mono{ font-family: var(--font-mono); }
