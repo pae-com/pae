@@ -1,0 +1,222 @@
+[
+  {
+    "ts": 1787581711621,
+    "kind": "add",
+    "date": "2026-08-24",
+    "channel": "เพจนครปฐม",
+    "type": "ล้างแอร์",
+    "qty": 1,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787581699771,
+    "kind": "add",
+    "date": "2026-08-24",
+    "channel": "เพจนครปฐม",
+    "type": "ล้างแอร์",
+    "qty": 2,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787581695524,
+    "kind": "add",
+    "date": "2026-08-24",
+    "channel": "เพจนครปฐม",
+    "type": "ล้างแอร์",
+    "qty": 1,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787581685780,
+    "kind": "add",
+    "date": "2026-08-24",
+    "channel": "ไม่ระบุ",
+    "type": "ตรวจเช็ค",
+    "qty": 1,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787581680670,
+    "kind": "add",
+    "date": "2026-08-24",
+    "channel": "LINE",
+    "type": "ล้างแอร์",
+    "qty": 7,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787581673766,
+    "kind": "add",
+    "date": "2026-08-24",
+    "channel": "LINE",
+    "type": "ล้างแอร์",
+    "qty": 3,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787581670372,
+    "kind": "add",
+    "date": "2026-08-24",
+    "channel": "LINE",
+    "type": "ล้างแอร์",
+    "qty": 1,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787581666740,
+    "kind": "add",
+    "date": "2026-08-24",
+    "channel": "เพจนครปฐม",
+    "type": "ล้างแอร์",
+    "qty": 2,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787581662732,
+    "kind": "add",
+    "date": "2026-08-24",
+    "channel": "เพจนนทบุรี",
+    "type": "ล้างแอร์",
+    "qty": 1,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787581657124,
+    "kind": "add",
+    "date": "2026-08-24",
+    "channel": "LINE",
+    "type": "ล้างแอร์",
+    "qty": 3,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787581655381,
+    "kind": "add",
+    "date": "2026-08-24",
+    "channel": "LINE",
+    "type": "ล้างแอร์",
+    "qty": 4,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787581647660,
+    "kind": "add",
+    "date": "2026-08-24",
+    "channel": "ไม่ระบุ",
+    "type": "ตรวจเช็ค",
+    "qty": 1,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787581641205,
+    "kind": "add",
+    "date": "2026-08-24",
+    "channel": "เพจนครปฐม",
+    "type": "ล้างแอร์",
+    "qty": 1,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787581639093,
+    "kind": "add",
+    "date": "2026-08-24",
+    "channel": "เพจนครปฐม",
+    "type": "ล้างแอร์",
+    "qty": 1,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787581633429,
+    "kind": "add",
+    "date": "2026-08-24",
+    "channel": "เพจนครปฐม",
+    "type": "ล้างแอร์",
+    "qty": 3,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787581625764,
+    "kind": "add",
+    "date": "2026-08-24",
+    "channel": "LINE",
+    "type": "ล้างแอร์",
+    "qty": 6,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787581615444,
+    "kind": "add",
+    "date": "2026-08-24",
+    "channel": "เพจนครปฐม",
+    "type": "ล้างแอร์",
+    "qty": 1,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787581609717,
+    "kind": "add",
+    "date": "2026-08-24",
+    "channel": "LINE",
+    "type": "ล้างแอร์",
+    "qty": 2,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787581604736,
+    "kind": "add",
+    "date": "2026-08-24",
+    "channel": "LINE",
+    "type": "ล้างแอร์",
+    "qty": 1,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787565889347,
+    "kind": "delete",
+    "date": "2026-08-24",
+    "channel": "LINE",
+    "type": "ล้างแอร์",
+    "qty": 1,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787565886947,
+    "kind": "add",
+    "date": "2026-08-24",
+    "channel": "LINE",
+    "type": "ล้างแอร์",
+    "qty": 1,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  {
+    "ts": 1787565816876,
+    "kind": "delete",
+    "date": "2026-08-24",
+    "channel": "LINE",
+    "type": "ล้างแอร์",
+    "qty": 2,
+    "ip": "172.26.22.126",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  }
+]
